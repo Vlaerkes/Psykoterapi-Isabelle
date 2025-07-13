@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kontakt - Isabelle Psykoterapi</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    .font-medieval {
+      font-family: 'MedievalSharp', cursive;
+    }
+    .font-cinzel {
+      font-family: 'Cinzel', serif;
+    }
+  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: ['class'],
+      theme: {
+        extend: {
+          colors: {
+            gray: {
+              800: "#2F2F2F",
+            },
+            purple: {
+              600: '#8B5CF6',
+            },
+            blue: {
+              250: "#2E4A62",
+              275: "#4C6681",
+            },
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-blue-275 min-h-screen flex flex-col">
+
+<nav class="fixed top-0 left-0 w-full bg-blue-250 text-white p-4 shadow z-50">
+  <div class="relative container mx-auto flex items-center justify-between">
+    <div class="text-3xl font-bold">Isabelle Psykoterapi</div>
+    <div class="flex space-x-6 text-m">
+      <a href="index.html" class="hover:text-gray-200">Hjem</a>
+      <a href="kontakt.html" class="hover:text-gray-200 text-gray-300">Kontakt</a>
+      <a href="metoder.html" class="hover:text-gray-200">Metoder</a>
+      <a href="om.html" class="hover:text-gray-200">Om</a>
+      <a href="blog.html" class="hover:text-gray-200">Blog</a>
+    </div>
+  </div>
+</nav>
+
+<main class="pt-20 mb-4 container mx-auto px-4 py-8 grid grid-cols-1 gap-6 bg-blue-275 w-auto w-full min-h-screen">
+  <div class="container pb-2">
+    <div class="mb-4 bg-white shadow-md rounded-lg p-6 border border-solid border-gray-700">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+        <div>
+          <h2 class="text-2xl font-bold mb-4 text-gray-800">Kontakt</h2>
+          <div class="text-gray-800 mb-6 space-y-4">
+            <p>
+              <strong>Kontakt:</strong><br>
+              Isabelle Guillois Lærkes<br>
+              Sølvgade 14<br>
+              1307 København K<br>
+              Tlf: +45 33 16 19 19<br>
+              Email: <a href="mailto:isagulae@gmail.dk" class="text-blue-600 underline">isagulae@gmail.dk</a>
+            </p>
+
+            <p>
+              <strong>Hvad er prisen og hvor lang tid varer en session?</strong>
+            </p>
+
+            <p>
+              <strong>Individuel psykoterapi:</strong><br>
+              Sessionen varer typisk 60 minutter og koster 850 kr.<br>
+              Anden varighed og pris kan aftales.
+            </p>
+
+            <p>
+              <strong>Gruppeterapi:</strong><br>
+              Sessionen varer 2 timer inklusive en kort pause og koster 1800 kr. for 4 gange, som betales forud.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex justify-center md:justify-end">
+          <img src="isabelle1.jpg" alt="Isabelle Psykoterapi" class="rounded-lg shadow-lg max-w-full h-auto object-cover">
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="bg-blue-250 text-white py-6 mt-auto border border-solid border-blue-250">
+  <div class="container mx-auto text-center">
+    <p>&copy; 2025 Isabelle Psykoterapi.</p>
+  </div>
+</footer>
+
+</body>
+</html>
