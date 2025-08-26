@@ -42,14 +42,34 @@
 
 <!-- Navigation -->
 <nav class="fixed top-0 left-0 w-full bg-blue-250 text-white p-4 shadow z-50">
-  <div class="relative container mx-auto flex items-center justify-between">
+  <div class="container mx-auto flex items-center justify-between">
     <div class="text-3xl font-bold">Isabelle Psykoterapi</div>
-    <div class="flex space-x-6 text-m">
+    
+    <!-- Desktop Menu -->
+    <div class="hidden md:flex space-x-6 text-m">
       <a href="index.html" class="hover:text-gray-200">Hjem</a>
       <a href="kontakt.html" class="hover:text-gray-200">Kontakt</a>
       <a href="metoder.html" class="hover:text-gray-200">Metoder</a>
       <a href="om.html" class="hover:text-gray-200">Om</a>
       <a href="blog.html" class="hover:text-gray-200">Blog</a>
+    </div>
+    
+    <!-- Mobile Menu Button -->
+    <div class="md:hidden relative">
+      <button id="mobileMenuBtn" class="text-white focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+      
+      <!-- Mobile Dropdown Menu -->
+      <div id="mobileDropdown" class="absolute right-0 top-full mt-2 w-48 bg-blue-250 border border-blue-200 rounded-lg shadow-lg hidden">
+        <a href="index.html" class="block px-4 py-3 text-white hover:bg-blue-200 hover:text-gray-200 border-b border-blue-200 last:border-b-0">Hjem</a>
+        <a href="kontakt.html" class="block px-4 py-3 text-white hover:bg-blue-200 hover:text-gray-200 border-b border-blue-200 last:border-b-0">Kontakt</a>
+        <a href="metoder.html" class="block px-4 py-3 text-white hover:bg-blue-200 hover:text-gray-200 border-b border-blue-200 last:border-b-0">Metoder</a>
+        <a href="om.html" class="block px-4 py-3 text-white hover:bg-blue-200 hover:text-gray-200 border-b border-blue-200 last:border-b-0">Om</a>
+        <a href="blog.html" class="block px-4 py-3 text-white hover:bg-blue-200 hover:text-gray-200 border-b border-blue-200 last:border-b-0">Blog</a>
+      </div>
     </div>
   </div>
 </nav>
@@ -128,6 +148,7 @@
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
+    // Contact modal functionality
     const modal = document.getElementById('kontaktModal');
     const openBtn = document.getElementById('openModalBtn');
     const closeBtn = document.getElementById('closeModalBtn');
@@ -154,9 +175,37 @@
         }
       });
     }
+
+    // Mobile menu functionality
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileDropdown = document.getElementById('mobileDropdown');
+
+    if (mobileMenuBtn && mobileDropdown) {
+      mobileMenuBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        mobileDropdown.classList.toggle('hidden');
+      });
+
+      // Close mobile menu when clicking outside
+      document.addEventListener('click', function(e) {
+        if (!mobileMenuBtn.contains(e.target) && !mobileDropdown.contains(e.target)) {
+          mobileDropdown.classList.add('hidden');
+        }
+      });
+
+      // Close mobile menu when clicking on a link
+      const mobileLinks = mobileDropdown.querySelectorAll('a');
+      mobileLinks.forEach(link => {
+        link.addEventListener('click', function() {
+          mobileDropdown.classList.add('hidden');
+        });
+      });
+    }
   });
 </script>
 </body>
 
 </html>
+
 
