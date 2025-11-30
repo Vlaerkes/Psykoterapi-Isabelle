@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Isabelle Psykoterapi</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    .font-medieval {
+      font-family: 'MedievalSharp', cursive;
+    }
+    .font-cinzel {
+      font-family: 'Cinzel', serif;
+    }
+  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: ['class'],
+      theme: {
+        extend: {
+          colors: {
+            gray: {
+              800: "#2F2F2F",
+            },
+            purple: {
+              600: '#8B5CF6',
+            },
+            blue: {
+              250: "#2E4A62",
+              275: "#4C6681",
+            },
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-blue-275 min-h-screen flex flex-col">
+
+<!-- Navigation -->
+<nav class="fixed top-0 left-0 w-full bg-blue-250 text-white p-4 shadow z-50">
+  <div class="container mx-auto flex items-center justify-between">
+    <div class="text-3xl font-bold">Isabelle Psykoterapi</div>
+    
+    <!-- Desktop Menu -->
+    <div class="hidden md:flex space-x-6 text-m">
+      <a href="index.html" class="hover:text-gray-200">Hjem</a>
+      <a href="kontakt.html" class="hover:text-gray-200">Kontakt</a>
+      <a href="metoder.html" class="hover:text-gray-200">Metoder</a>
+      <a href="om.html" class="hover:text-gray-200">Om</a>
+      <a href="blog.html" class="hover:text-gray-200">Blog</a>
+    </div>
+    
+    <!-- Mobile Menu Button -->
+    <div class="md:hidden relative">
+      <button id="mobileMenuBtn" class="text-white focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+      
+      <!-- Mobile Dropdown Menu -->
+      <div id="mobileDropdown" class="absolute right-0 top-full mt-2 w-48 bg-blue-250 border border-blue-200 rounded-lg shadow-lg hidden">
+        <a href="index.html" class="block px-4 py-3 text-white hover:bg-blue-200 hover:text-gray-200 border-b border-blue-200 last:border-b-0">Hjem</a>
+        <a href="kontakt.html" class="block px-4 py-3 text-white hover:bg-blue-200 hover:text-gray-200 border-b border-blue-200 last:border-b-0">Kontakt</a>
+        <a href="metoder.html" class="block px-4 py-3 text-white hover:bg-blue-200 hover:text-gray-200 border-b border-blue-200 last:border-b-0">Metoder</a>
+        <a href="om.html" class="block px-4 py-3 text-white hover:bg-blue-200 hover:text-gray-200 border-b border-blue-200 last:border-b-0">Om</a>
+        <a href="blog.html" class="block px-4 py-3 text-white hover:bg-blue-200 hover:text-gray-200 border-b border-blue-200 last:border-b-0">Blog</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Main Content -->
+<main class="pt-24 mb-4 container mx-auto px-4 py-8 w-full min-h-screen">
+  <div class="mb-4 bg-white shadow-md rounded-lg p-6 border border-solid border-gray-700">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
+      <!-- Left Column -->
+      <div>
+        <h2 class="text-2xl font-bold mb-4 text-gray-800">Et trygt rum til forandring</h2>
+        <div class="text-gray-800 mb-6 space-y-4">
+          <p>Jeg tilbyder individuel psykoterapi og gruppeterapi, også til dig med en diagnose.</p>
+
+          <p>Når du starter i Terapi hos mig, er der flere veje, vi kan gå, alt efter hvad du er tryg ved og finder
+mest meningsfuldt. Vores styringsredskab er det, du ønsker at terapien skal føre til.
+Vi kan fokusere på dine mål, og afdække ressourcer og værdier til at hjælpe dig med at nå dem.
+Vi kan fokusere på din nutid og de reaktioner, tanker og følelser, der opleves svære eller
+problematiske. Her kan vi afprøve metoder og værktøjer til den ønskede forandring.
+Vi kan gå skridtet dybere, og ved samtale om opvækst, få forståelse for de reaktionsmønstre, du
+har i dag. Når vi taler om din fortid kan der dukke gamle sår og traumer op, som har brug for at
+læges.</p>
+
+          <p>Fælles for alle veje er, at din selvindsigt bliver øget, og du vil få hjælp til komme ud af
+fastlåsthed, hjælp til at regulere dine følelser, dæmpe overtænkning og selvkritik, få nye
+perspektiver og nye handlemuligheder.
+Terapien vil overvejende være samtalebaseret, men jeg vil spørge til dine kropsfornemmelser,
+og dine følelser. Jeg vil måske præsentere dig for nogle øvelser, der kan ændre dine sansninger
+og dit kropslige udtryk.
+</p>
+
+          <p>Terapi er også et arbejde for dig.
+Derfor skal du søge terapi, når du er forandringsparat og har mod til, at afprøve nye veje.
+Det kan være, du kommer til at opleve, at forandringerne sker helt af sig selv i takt med større
+indsigt og flere perspektiver, eller det kan være, at det opleves som hårdt arbejde. Det ved vi
+ikke før, vi er i gang.</p>
+        
+            
+
+          <p>Gruppeterapi.
+Hvis flere af mine klienter har lignende udfordringer opretter jeg grupper på 4-6 personer, hvis
+der er interesse for det. En sådan gruppe vil typisk mødes 1 gang hver uge eller hver 14. dag.
+I gruppeterapi, vil der altid være en indledende runde, hvor vi finder ud af, hvad der skal
+arbejdes med og om en eller to af deltagerne er i fokus.
+Fordelene ved en gruppe er bl.a.:
+Mindske ensomhed og skam ved at have det, som man har det.
+At høre egne udfordringer udtalt med andres ord og perspektiver udvider bevidstheden om sig
+selv.
+Inspiration til at tænke og handle anderledes.</p>
+        </div>
+
+        <!-- Kontakt Button -->
+        <button id="openModalBtn" class="bg-blue-600 text-white px-4 py-3 border-none rounded-lg text-lg cursor-pointer transition duration-300 hover:bg-blue-200">
+          Kontakt
+        </button>
+      </div>
+
+      <!-- Right Column -->
+      <div class="flex justify-center md:justify-end">
+        <img src="isabelle1.jpg" alt="Isabelle Psykoterapi" class="rounded-lg shadow-lg max-w-full h-auto object-cover" />
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- Modal -->
+<div id="kontaktModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+  <div class="bg-white rounded-lg shadow-lg p-6 w-11/12 max-w-md relative">
+    <button id="closeModalBtn" class="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-xl font-bold">&times;</button>
+    <div class="text-gray-800 space-y-2 text-sm leading-relaxed">
+      <p>
+        <strong>Kontakt:</strong><br>
+        Isabelle Guillois Lærkes<br>
+        Sølvgade 14<br>
+        1307 København K<br>
+        Tlf: +45 33 16 19 19<br>
+        Email: <a href="mailto:isagulae@gmail.dk" class="text-blue-600 underline">isagulae@gmail.dk</a>
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="bg-blue-250 text-white py-6 mt-auto border border-solid border-blue-250">
+  <div class="container mx-auto text-center">
+    <p>&copy; 2025 Isabelle Psykoterapi.</p>
+  </div>
+</footer>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    // Contact modal functionality
+    const modal = document.getElementById('kontaktModal');
+    const openBtn = document.getElementById('openModalBtn');
+    const closeBtn = document.getElementById('closeModalBtn');
+
+    if (openBtn && modal && closeBtn) {
+      openBtn.addEventListener('click', (e) => {
+        console.log('Button clicked!');
+        e.preventDefault();
+        modal.style.display = 'flex';
+        modal.classList.remove('hidden');
+      });
+
+      closeBtn.addEventListener('click', (e) => {
+        console.log('Close button clicked!');
+        e.preventDefault();
+        modal.style.display = 'none';
+        modal.classList.add('hidden');
+      });
+
+      modal.addEventListener('click', function (e) {
+        if (e.target === modal) {
+          modal.style.display = 'none';
+          modal.classList.add('hidden');
+        }
+      });
+    }
+
+    // Mobile menu functionality
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileDropdown = document.getElementById('mobileDropdown');
+
+    if (mobileMenuBtn && mobileDropdown) {
+      mobileMenuBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        mobileDropdown.classList.toggle('hidden');
+      });
+
+      // Close mobile menu when clicking outside
+      document.addEventListener('click', function(e) {
+        if (!mobileMenuBtn.contains(e.target) && !mobileDropdown.contains(e.target)) {
+          mobileDropdown.classList.add('hidden');
+        }
+      });
+
+      // Close mobile menu when clicking on a link
+      const mobileLinks = mobileDropdown.querySelectorAll('a');
+      mobileLinks.forEach(link => {
+        link.addEventListener('click', function() {
+          mobileDropdown.classList.add('hidden');
+        });
+      });
+    }
+  });
+</script>
+</body>
+
+</html>
